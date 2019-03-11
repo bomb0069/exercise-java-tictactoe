@@ -11,6 +11,14 @@ public class TicTacToeTest {
     }
 
     @Test
+    public void only_one_turn_with_0_0_should_status_not_finished_game () {
+        TicTacToe game = new TicTacToe();
+        game.play(0,0);
+        int actualStatus = game.getStatus();
+        Assert.assertEquals(game.NOT_FINISHED, actualStatus);
+    }
+
+    @Test
     public void all_of_first_row_with_O_should_status_win_by_O () {
         TicTacToe game = new TicTacToe();
         game.play(0,0);

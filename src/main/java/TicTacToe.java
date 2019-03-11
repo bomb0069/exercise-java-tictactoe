@@ -5,7 +5,7 @@ public class TicTacToe {
     int[][] board = new int[3][3];
 
     public int getStatus() {
-        if (board[0][0] == 1)
+        if (board[0][0] == 1 && board[0][1] == 1 && board[0][2] == 1)
             return 1;
         return 0;
     }
