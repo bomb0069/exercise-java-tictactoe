@@ -11,11 +11,10 @@ public class TicTacToe {
 
     public int getStatus() {
 
-        if (board[0][0] == 2 && board[0][1] == 2 && board[0][2] == 2)
-            return 2;
-
-        if (board[0][0] == 1 && board[0][1] == 1 && board[0][2] == 1)
-            return 1;
+        for (int player = 1;player <= 2 ;player++ ) {
+            if (board[0][0] == player && board[0][1] == player && board[0][2] == player)
+                return player;
+        }
 
         return 0;
     }
